@@ -1,0 +1,880 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'tahoma';
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --maincolor :#8d99af;
+    --textColor : #878787;
+    --iconHover : #8d99af;
+    --myColor : #0a152a
+}
+.container {
+    width:1320px;
+    margin: auto;
+}
+
+.g-p{
+    padding: 120px 0;
+}
+
+.g-b {
+    border-bottom: 1px solid rgb(226 224 224 / 55%);
+}
+/* global */
+
+/* start header */ 
+
+header {
+    height: 80vh;
+    background: url('../images/banner-bg.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.226);
+    position: fixed;
+    width: 100%;
+    transform: translate(0, -103px);
+    z-index: 20;
+   
+}
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lists {
+    display:flex;
+    align-items: center;
+}
+
+.lists li a {
+    margin: 0 31px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.lists li a:hover {
+    color: var(--maincolor);
+}
+
+
+li a.active {
+
+    color: var(--maincolor);
+}
+
+
+.lists li a:last-child {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+.lists li a:last-child:hover  {
+    background-color: var(--maincolor);
+}
+
+.lists li a:last-child:hover span  {
+    color: #FFF;
+}
+
+.lists li a:last-child i {
+    width: 20px;
+    height: 20px ;
+    border-radius: 50%;
+    background-color: var(--maincolor);
+    color: #FFF;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.lists li a:last-child  span {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--textColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-parent {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 1320px;
+}
+
+.search-header p , .search-header h1 {
+    color: #FFF;
+}
+
+.search-header {
+
+    text-align: center;
+}
+.search-header p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.search-header h1 {
+
+    font-size: 50px;
+
+}
+
+.search-select {
+    display: flex;
+    margin: 50px 0;
+
+}
+
+.search-select >div {
+    flex-basis: 28%;
+}
+
+.search-select .select-box {
+
+    background-color: #FFF;
+   
+}
+
+.search-select .select-box:first-child{
+    border-radius: 14px 0 0 14px;
+}
+
+.search-select .select-box select, .search-select .search-input form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.search-select .select-box select {
+    padding: 0 25px;
+    text-transform: capitalize;
+    width: 95%;
+    outline: none;
+    border-radius: 5px;
+    color: var(--textColor);
+    font-size: 17px;
+    outline: 1px solid #FFF;
+    outline: none;
+    height: 100%;
+    border-radius: 14px  0 0 14px;
+}
+
+
+.search-select .search-input form {
+    position: relative;
+}
+
+.search-select .search-input form input {
+    padding: 25px 30px;
+    border-left:none ;
+    outline: none;
+    font-size: 17px;
+    display: inline-block;
+    height: 75px;
+}
+
+
+.search-select .search-input form::after {
+    content: "";
+    border-left: 1px solid rgb(148, 148, 148) ;
+    height: 35px;
+    width: 5px;
+    position: absolute;
+    top: 20px;
+    margin-left: -15px;
+}
+
+.search-select .search-input form::before {
+    content: "";
+    border-left: 1px solid rgb(148, 148, 148) ;
+    height: 35px;
+    width: 5px;
+    position: absolute;
+    top: 20px;
+    margin-left: 15px;
+}
+
+
+
+.search-select .btn {
+    flex-basis: 22%;
+    text-align: center;
+}
+
+.search-select .btn a {
+    max-height: 100%;
+    background-color: var(--maincolor);
+    display: inline-block;
+    width: 100%;
+    border-radius: 0 14px 14px 0 ;
+    padding: 20px 0;
+
+}
+
+.search-select .btn a span {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #FFF;
+
+}
+
+
+.search-select .btn a i {
+ 
+    width: 35px;
+    height: 35px;
+    background-color: #FFF;
+    border-radius: 50%;
+    line-height: 35px;
+    color: var(--maincolor);
+}
+
+
+
+.icons-list .ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.icons-list .ul .imag {
+    text-align: center;
+    margin-right: 105px;
+}
+
+.icons-list .ul .imag i {
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #FFF;
+    text-align: center;
+    line-height: 65px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-bottom: 15px
+}
+
+.icons-list .ul .imag i:hover {
+    background-color: #041025d3;
+}
+
+.icons-list .ul .imag:last-child i {
+    line-height: 75px;
+}
+
+.icons-list .imag span {
+    display: block;
+    color: #FFF;
+}
+
+/* finish ---------------- header */
+
+.global-header {
+    text-align: center;
+}
+
+.global-header h2 {
+    color: var(--textColor);
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0px 0 25px 0px ;
+}
+
+.global-header p {
+    color: var(--maincolor);
+    font-size: 14px;
+    margin-bottom: 53px;
+}
+
+
+.categories {
+    display: flex;
+    height: 600px;
+    border-radius: 12px;
+    background-color: var(--myColor);
+    
+}
+
+.categories aside {
+    flex-basis: 25%;
+    position: relative;
+    z-index: 8;
+}
+
+
+aside .btni button {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: none;
+    background-color: var(--maincolor);
+    border-bottom: 1px solid #041025d3;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+aside .btni button:first-child {
+
+    border-top-left-radius: 10px ;
+    
+}
+
+aside .btni button:last-child {
+
+    border-bottom-left-radius: 10px ;
+    
+}
+
+aside .btni button i {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FFF;
+    line-height: 65px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+aside .btni button:last-child i {
+    line-height: 72px;
+}
+
+aside .btni button span {
+    display: inline-block;
+    vertical-align: 7px;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.categories .desc-box {
+    flex-basis: 75%;
+    position: relative;
+}
+
+.desc-box .desc-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    background: #0a152a;
+    padding: 30px 0;
+    border-radius: 0  10px 10px 0;
+}
+
+.desc-box .desc-flex:first-child {
+
+    opacity: 0;
+
+}
+
+.desc-box .desc-flex:nth-child(4),.desc-box .desc-flex:nth-child(3),.desc-box .desc-flex:nth-child(2){
+
+    opacity: 0;
+}
+
+.desc-box .desc-flex > div {
+    flex-basis: 50%;
+}
+
+.desc-box .desc-flex img {
+    height: 100%;
+    border-radius: 10px ;
+}
+
+.desc-box .desc-flex .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 88px;
+}
+
+
+.desc-box .desc-flex .desc h2 {
+    color: #FFF;
+    font-size: 22px;
+    flex-basis: 20%;
+    line-height: 1.7;
+}
+
+.desc-box .desc-flex .desc p {
+
+    color: #dbdada;
+    margin: 40px 0;
+    line-height: 1.7;
+    
+}
+
+.desc-box .desc-flex .desc button {
+    border: none;
+    background: #FFF;
+    padding: 10px;
+    border-radius: 11px;
+}
+
+.desc-box .desc-flex .desc button span {
+
+    text-transform: capitalize;
+    font-size: 17px;
+    color:var(--textColor)
+
+}
+
+.desc-box .desc-flex .desc button i {
+    color: #FFF;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--maincolor);
+    line-height: 25px;
+    margin-right: 12px;   
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+
+/* animation of the first slider in js*/
+@keyframes animate1 {
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+@keyframes animate3 {
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+@keyframes animate4{
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+@keyframes animate {
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+
+@keyframes animate5 {
+
+    0% {
+        transform: translatex(0px);
+    }
+
+    10% {
+        transform: translatex(-15px);
+    }
+
+    20% {
+        transform: translatex(-20px);
+    }
+
+    30% {
+        transform: translatex(-25px);
+    }
+
+    40% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(-35px);
+    }
+
+}
+/* animation of the first slider in js*/
+
+/* ------------------------------------------------------*/
+
+/* start section of listss */
+
+
+.recent-list .container {
+    overflow: hidden;
+    max-width: 1320px;
+
+}
+
+
+
+.list-box-parent{
+    width: calc(1100px*6);
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.list-box  {
+    flex-basis: 33.33%;
+    display: inline-block;
+    transition: all 0.8s linear;
+}
+.list-box .listbox-content:nth-child(2) .description{
+    margin: 20px 0;
+}
+
+
+.list-box .listbox-content .description {
+    background-color: #f7f7f7;
+}
+
+.list-box .listbox-content .description div:nth-child(2),.list-box .listbox-content .description div:nth-child(3){
+    padding: 50px;
+}
+
+
+.list-box .listbox-content .description {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.list-box .listbox-content .description > div{
+
+    flex-basis: 36%
+}
+
+.list-box .listbox-content .description > div:last-child{
+    flex-basis: 24%;
+}
+
+.list-box .listbox-content .description .img-desc a {
+
+    font-size: 22px;
+    color: var(--textColor);
+    font-weight: bolder;
+    text-transform: capitalize;
+
+}
+
+.list-box .listbox-content .description .img-desc a + p {
+
+    color: var(--maincolor);
+    margin: 18px 0;
+}
+
+.list-box .listbox-content .description .img-desc span  {
+
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.list-box .listbox-content .description .img-desc span i {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: var(--maincolor);
+    font-size: 13px;
+    color: #FFF;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.list-box .listbox-content .description .img-desc p:nth-of-type(2){
+    font-size: 15px;
+}
+.list-box .listbox-content .description .img-desc p:nth-of-type(2) span{
+    color: var(--maincolor);
+    text-transform: capitalize;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.list-box .listbox-content .description .img-desc p {
+    margin-bottom: 20px;
+}
+
+.list-box .listbox-content .description .img-desc p img {
+
+    display: inline-block;
+    height: 14px;
+    width: 25px;
+    margin-right: 10px ;
+}
+
+.list-box .listbox-content .description .rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-box .listbox-content .description .rate div > i {
+    color: gold;
+    font-size: 13px;
+    
+}
+
+.list-box .listbox-content .description .rate span {
+
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-size: 17px;
+
+}
+
+.list-box .listbox-content .description .rate button{
+
+    padding: 15px 25px;
+    background-color: #FFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.list-box .listbox-content .description .rate button:hover {
+
+    background-color: var(--maincolor);
+    color: #FFF;
+
+}
+
+.list-box .listbox-content .description .rate button span {
+    font-size: 15px;
+}
+
+.list-box .listbox-content .description .rate button i {
+
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: var(--maincolor);
+    color: #FFF;
+    border-radius: 50%;
+
+}
+
+/*---------------------------------------------------------*/
+
+/* start contact us */
+.contactus {
+
+    padding: 60px 0;
+}
+.contact-flex {
+    display: flex;
+}
+
+.contact-c {
+    flex-basis: calc(100% / 3);
+}
+
+.contact-c .logo {
+    padding: 30px 0 ;
+}
+
+.contact-c p {
+    line-height: 1.7;
+    color: var(--textColor)
+}
+
+.contact-c .logo + p {
+    width: 92%;
+}
+
+.contact-c h4 {
+    margin-bottom: 35px;
+    color: var(--maincolor);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+.contact-c .list {
+    display: inline-block;
+    margin-right: 60px;
+    font-size: 18px;
+
+}
+
+.contact-flex .contact-c:nth-child(2) {
+    padding: 0 0 0 25px;
+}
+
+.contact-c .list a {
+    color: var(--textColor);
+}
+
+.contact-c .list li {
+    margin-bottom: 20px;
+}
+
+
+.contact-c .list a:hover {
+    color: var(--maincolor);
+    text-decoration: underline
+}
+
+.contact-c span {
+    display: inline-block;
+    margin-top: 45px;
+    margin-right: 80px;
+    font-size: 18px;
+    color: var(--textColor);
+}
+
+.contact-c span a {
+    color: inherit;
+}
+
+/* end contact us */
+
+/* start footer */
+
+.foot {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+.foot p {
+    margin-bottom: 15px;
+}
+
+.foot span span:hover {
+    color: var(--maincolor);
+    cursor: pointer;
+}
